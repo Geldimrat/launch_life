@@ -1,0 +1,691 @@
+.landing {
+  // home section starts
+  .home {
+    width: 100%;
+    height: 100vh;
+    max-height: 728px;
+    position: relative;
+
+    //   @include tablet() {
+    //     background: red;
+    //   }
+
+    //   @include mobile {
+    //     background: green;
+    //   }
+
+    .home_sides {
+      width: 100%;
+      height: 100%;
+      @include flexBox(space-between, flex-start);
+
+      // @include tablet() {
+      //   width: 85%;
+      //   margin: 0 auto;
+      //   flex-direction: column-reverse;
+      //   display: none;
+      // }
+
+      .left {
+        width: 50%;
+        height: 100%;
+        .hooper {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .img {
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              // object-fit: cover;
+            }
+          }
+
+          .hooper-navigation {
+            position: absolute;
+            bottom: 48px;
+            right: 125px;
+
+            .hooper-prev {
+              width: 35px;
+              height: 35px;
+              position: absolute;
+              padding: 8px;
+              padding: 0;
+              @include flexBox(center, center);
+              background: $white;
+              border: 1px solid $white;
+              border-radius: 50%;
+              svg {
+                fill: $accent;
+                width: 50px;
+                height: 50px;
+              }
+            }
+
+            .hooper-next {
+              width: 48px;
+              height: 48px;
+              position: absolute;
+              top: 0;
+              left: 48px;
+              padding: 4px;
+              @include flexBox(center, center);
+              background: $white;
+              border: 1px solid $white;
+              border-radius: 50%;
+              svg {
+                fill: $accent;
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 50%;
+        height: 100%;
+        @include flexBox(center, center);
+        .content {
+          margin-right: 60px;
+          p.title {
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 125%;
+            color: $dark;
+
+            span {
+              font-size: 50px;
+              line-height: 125%;
+            }
+          }
+
+          p.description {
+            margin-top: 20px;
+            width: 384px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150.02%;
+            color: $dark;
+          }
+
+          .courses_btn {
+            margin-top: 30px;
+            display: inline-block;
+            border: 3px solid $mainColor;
+            border-radius: 0px 20px 0px 0px;
+            padding: 15px 40px;
+            background: $white;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: $dark;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+
+            &:hover {
+              background: $mainColor;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .scroll_down {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      // animation: up_down 1.8s linear infinite;
+      .drop_content {
+        width: 85%;
+        margin: 0 auto;
+        text-decoration: none;
+        @include flexBox(flex-end, center);
+
+        .icon {
+          width: 30px;
+          height: 30px;
+          @include flexBox(center, center);
+          border: 1px solid #eeeeee;
+          border-radius: 50%;
+        }
+
+        .text {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          color: $dark;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    @keyframes up_down {
+      0% {
+        bottom: 0px;
+      }
+      25% {
+        bottom: 25px;
+      }
+      50% {
+        bottom: 50px;
+      }
+      75% {
+        bottom: 25px;
+      }
+      100% {
+        bottom: 0px;
+      }
+    }
+  }
+  // home sections ends
+
+  // partners section start
+  .partners {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+    .top_side {
+      width: 85%;
+      margin: 0 auto;
+      p.title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        color: $dark;
+      }
+
+      .partners_slider {
+        // margin-top: 30px;
+        width: 100%;
+
+        .hooper {
+          width: 100%;
+          height: 150px;
+
+          .partner_logo {
+            width: 100%;
+            height: 100%;
+            @include flexBox(center, center);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .bottom_side {
+      width: 100%;
+      position: relative;
+      .shadow {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        width: 180px;
+        height: 122px;
+        // background: red;
+        background: rgba(104, 255, 228, 0.7);
+        filter: blur(100px);
+      }
+    }
+  }
+  // partner section end
+
+  // about section start
+  .about_us {
+    padding-top: 110px;
+    width: 100%;
+    height: 350px;
+    position: relative;
+
+    .about_content {
+      width: 85%;
+      margin: 0 auto;
+
+      .information {
+        p.title {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 48px;
+          color: $dark;
+          margin-bottom: 15px;
+        }
+        p {
+          width: 350px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $dark;
+        }
+      }
+    }
+
+    .total_students {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  // about section end  T9iN8J.gvY7wFT/
+
+  // Advantages and goals sectioin start
+  .adv_goals {
+    width: 85%;
+    height: 452px;
+    margin: 200px auto 130px auto;
+    @include flexBox(space-between, flex-start);
+
+    .left {
+      width: 50%;
+      .goal_img {
+        width: 479px;
+        height: 452px;
+        border-radius: 30px 0px 0px 0px;
+        position: relative;
+
+        .moon_vector {
+          position: absolute;
+          top: -47px;
+          left: -51px;
+          z-index: -1;
+        }
+
+        .circle_vector {
+          position: absolute;
+          bottom: 59px;
+          right: -50px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+      height: 100%;
+
+      p.title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        color: $dark;
+      }
+
+      p.description {
+        margin-top: 15px;
+        width: 502px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $dark;
+      }
+
+      .members_card {
+        .first_card {
+          width: 411px;
+          height: 111px;
+          border: 1px solid #4285f4;
+          border-radius: 0px 15px 15px 15px;
+          //   padding: 21px 30px;
+          @include flexBox(center, center);
+
+          margin-top: 35px;
+
+          .content {
+            margin-left: 30px;
+            p.name {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 182.7%;
+              color: $dark;
+            }
+
+            p.info {
+              width: 269px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 19px;
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Advantages and goals sectioin end
+
+  // Courses section start
+  .courses {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(273.32deg, #4fc3f7 2.09%, #4285f4 98.13%);
+    border-radius: 35px 0px 0px 0px;
+    padding: 90px 0 103px 0;
+
+    .courses_content {
+      .top {
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+        .title {
+          p.name {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            color: $white;
+          }
+
+          p.info {
+            margin-top: 15px;
+            width: 512px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $white;
+          }
+        }
+
+        .course_cards {
+          width: 100%;
+          @include flexBox(space-between, center);
+          //   position: relative;
+
+          .card_1 {
+            margin-top: 150px;
+          }
+
+          .card_2 {
+            margin-top: 60px;
+          }
+
+          .card_3 {
+            margin-top: -10px;
+          }
+        }
+      }
+
+      .bottom {
+        position: relative;
+
+        .vector_icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        .choose_launchLife {
+          padding-top: 130px;
+          width: 85%;
+          margin: 0 auto;
+
+          .question {
+            p.title {
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 48px;
+              color: $white;
+            }
+
+            p.description {
+              margin-top: 10px;
+              width: 596px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+              color: $white;
+            }
+          }
+
+          .advantages {
+            width: 100%;
+            @include flexBox(space-evenly, center);
+
+            .card_plus {
+              margin-top: 80px;
+              width: 226px;
+
+              .vector_img {
+                height: 110px;
+                @include flexBox(flex-start, center);
+              }
+
+              p.name {
+                margin-top: 20px;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 150%;
+                color: $white;
+              }
+
+              p.text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Courses section end
+
+  // Students section start
+  .students {
+    width: 100%;
+    padding: 100px 0;
+    // background: red;
+    position: relative;
+
+    .shadow {
+      width: 350px;
+      height: 122px;
+      background: rgba(104, 255, 228, 0.7);
+      filter: blur(95px);
+      transform: rotate(-11deg);
+      position: absolute;
+      top: 160px;
+      right: 10px;
+    }
+
+    .vector_icon {
+      position: absolute;
+      top: 120px;
+      right: 50px;
+    }
+
+    .circle_vector {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .student_content {
+      width: 85%;
+      margin: 0 auto;
+
+      .top {
+        p.title {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 48px;
+          color: $dark;
+        }
+
+        p.info {
+          margin-top: 10px;
+          width: 547px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $dark;
+        }
+      }
+
+      .students_quote {
+        margin-top: 40px;
+        width: 1240px;
+        // overflow: hidden;
+        height: 380px;
+
+        .quotes_slider {
+          width: 100%;
+          height: 100%;
+
+          .hooper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            // cursor: pointer;
+
+            .hooper-navigation {
+              position: absolute;
+              bottom: 0;
+              right: 190px;
+              .hooper-prev {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                padding: 8px;
+                padding: 0;
+                @include flexBox(center, center);
+                background: #ffffff;
+                border: 1px solid #eaeaea;
+                border-radius: 50%;
+                svg {
+                  fill: $mainColor;
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+
+              .hooper-next {
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                top: 0;
+                left: 48px;
+                padding: 4px;
+                @include flexBox(center, center);
+                background: #ffffff;
+                border: 1px solid #eaeaea;
+                border-radius: 50%;
+                svg {
+                  fill: $mainColor;
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Students section end
+
+  // Contact section start
+  .contact_us {
+    width: 85%;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 95px;
+    @include flexBox(space-between, flex-start);
+
+    .left_side {
+      width: 50%;
+      .forms {
+        p.title {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 115.4%;
+          color: $dark;
+          margin-bottom: 20px;
+        }
+        .input {
+          width: 500px;
+          margin-bottom: 20px;
+          input {
+            width: 100%;
+            background: #f9f9f9;
+            border: 1px solid #cecece;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $dark;
+            padding: 15px 20px;
+            outline: none;
+            &::placeholder {
+              color: #ababab;
+            }
+          }
+        }
+
+        .comment {
+          width: 500px;
+          height: 170px;
+          padding: 15px 20px;
+          background: #f9f9f9;
+          border: 1px solid #cecece;
+          border-radius: 10px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: $dark;
+          outline: none;
+          resize: none;
+          &::placeholder {
+            color: #ababab;
+          }
+        }
+
+        .send_btn {
+          width: 500px;
+          @include flexBox(flex-end, center);
+
+          .send_data_btn {
+            margin-top: 25px;
+            border: 3px solid #4285f4;
+            border-radius: 0px 20px 0px 0px;
+            padding: 15px 40px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: $dark;
+            background: white;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background: $mainColor;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .right_side {
+      width: 50%;
+      height: 470px;
+      .img_girl {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  // Contact section end
+}
